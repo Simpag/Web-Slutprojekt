@@ -1,3 +1,11 @@
+<!--
+  5/4-19 Undersökte hur handlebars fungerade
+
+  11/4-19 Testade Github api samt lade grunden för att hämta en portfolio fil. 
+  Lärde mig att github har en limit på ca 60 requests per timme för deras api om man inte är authenticated.
+
+-->
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -10,7 +18,8 @@
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
-  <script type="text/javascript" src="../javascript/handlebars-v4.1.1.js"></script>
+  <script type="text/javascript" src="../javascript/Libraries/handlebars-v4.1.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -26,6 +35,10 @@
 
   </div>
 
+  <button id = "test">Test button</button>
+  <button id = "test2">List portfolio</button>
+
   <script type="text/javascript" src="../javascript/projects.js"></script>
+  <script type="text/javascript" src="../javascript/github.js"></script>
 </body>
 </html>
