@@ -6,20 +6,18 @@ var repos = [];
 var repoNames = [];
 var portfolioContents = []; // [index][repo name][portfolio content]
 
-
-document.getElementById("test").addEventListener("click", function () { 
+window.onload = function () { 
     $.getJSON(repoUrl,
         function (response) {
             recived_repos(response);
         }
     );
-});
-
-document.getElementById("test2").addEventListener("click", list_portfolio_contents);
+}
 
 function recived_repos(response) {
-    alert("called 1");
     repos = response;
+    var _requestCount = 0;
+
     for (let i = 0; i < response.length; i++) {
         repoNames[i] = response[i].name;
     }
@@ -29,7 +27,7 @@ function recived_repos(response) {
         var _repoName = repoNames[i];
         var _url = begginningContentUrl + _repoName + endContentUrl;
         
-        $.getJSON(_url,
+        var _requestJSON = $.getJSON(_url,
             function (_response, textStatus) {
                 if (textStatus === "success"){
                     var portfolioString = atob(_response.content);
@@ -40,16 +38,14 @@ function recived_repos(response) {
                 }
             }
         );
+
+        _requestJSON.complete(function() {
+            _requestCount++;
+
+            if (_requestCount == repoNames.length) {
+                list_portfolio_contents();
+                console.log("listed");
+            }
+        });
     }
-}
-
-function list_portfolio_contents() {
-    var _ul = document.createElement("ul");
-
-    portfolioContents.forEach(element => {
-        var _li = document.createElement("li");
-        _li.innerText = element;          
-        _ul.appendChild(_li);
-        document.body.appendChild(_ul);                      
-    });
 }
