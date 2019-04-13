@@ -34,18 +34,21 @@ function recived_repos(response) {
                     //var portfolioObject = { "name" : _name, "content" : portfolioString }
                     
                     portfolioContents.push(portfolioString);
+                    console.log("Content");
                     console.log(portfolioContents);
                 }
             }
-        );
-
-        _requestJSON.complete(function() {
+        ).always(function() {
             _requestCount++;
-
+            console.log("Counted");
             if (_requestCount == repoNames.length) {
                 list_portfolio_contents();
                 console.log("listed");
             }
-        });
+          });
+
+        //_requestJSON.complete(function() {
+            
+        //});
     }
 }
