@@ -40,7 +40,6 @@ function recived_repos(response) {
             }
         ).always(function() {
             _requestCount++;
-            console.log("Counted");
             if (_requestCount == repoNames.length) {
                 list_portfolio_contents();
                 console.log("listed");
