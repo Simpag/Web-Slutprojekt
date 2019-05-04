@@ -14,15 +14,15 @@ p {
 }
 
 a {
-  color: #fed136;
+  color: rgb(255,116,31);
 }
 
 a:hover {
-  color: #fec503;
+  color: rgb(255,90,0);
 }
 
 .text-primary {
-  color: #fed136 !important;
+  color: rgb(255,116,31) !important;
 }
 
 h1,
@@ -71,13 +71,13 @@ section h3.section-subheading {
 }
 
 .btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: rgb(255,116,31);
+  border-color: rgb(255,116,31);
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
+  background-color: rgb(255,90,0) !important;
+  border-color: rgb(255,90,0) !important;
   color: white;
 }
 
@@ -87,7 +87,7 @@ section h3.section-subheading {
 }
 
 ::selection {
-  background: #fed136;
+  background: rgb(255,116,31);
   text-shadow: none;
 }
 
@@ -110,17 +110,17 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #fed136;
+  background-color: rgb(255,116,31);
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand {
-  color: #fed136;
+  color: rgb(255,116,31);
   font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #fec503;
+  color: rgb(255,90,0);
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -133,7 +133,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: rgb(255,116,31);
 }
 
 @media (min-width: 992px) {
@@ -241,7 +241,7 @@ header.masthead .intro-text .intro-heading {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(254, 209, 54, 0.9);
+  background: rgb(255,90,0);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -443,7 +443,7 @@ header.masthead .intro-text .intro-heading {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #fed136;
+  background-color: rgb(255,116,31);
 }
 
 .timeline > li .timeline-image h4 {
@@ -610,11 +610,11 @@ section#contact .form-group input.form-control {
 }
 
 section#contact .form-group textarea.form-control {
-  height: 248px;
+  height: 158px;
 }
 
 section#contact .form-control:focus {
-  border-color: #fed136;
+  border-color: rgb(255,116,31);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -682,5 +682,5 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #fed136;
+  background-color: rgb(255,116,31);
 }
