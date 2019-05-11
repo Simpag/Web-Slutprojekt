@@ -1,0 +1,73 @@
+/*
+ * Navigation
+*/
+
+#main-nav {
+    background-color: gray;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1337; /* Should always be ontop.... :) */
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+#main-nav-logo {
+    display: inline-block;
+    padding-top : 0.3125rem;
+    padding-bottom: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    color: rgb(255,116,31);
+    font-size: 1.75em;
+    text-decoration: none;
+}
+
+#main-nav-logo:hover, #main-nav-logo:focus, #main-nav-logo:active {
+    color: rgb(255,90,0);
+}
+
+.nav-item {
+    box-sizing: border-box;
+    display: list-item;
+}
+
+.nav-item a {
+    display: block;
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: 400;
+    padding: 1.1em 1em;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.nav-item a:hover, .nav-item a:focus, .nav-item a:active {
+    color: rgb(255,116,31);
+}
+
+#nav-items ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}

@@ -4,6 +4,15 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 
+@font-face {
+  font-family: 'mirinia';
+  src: url('../fonts/mirinia/mirinia-regular-webfont.woff2') format('woff2'),
+       url('../fonts/mirinia/mirinia-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -116,7 +125,7 @@ img::-moz-selection {
 
 #mainNav .navbar-brand {
   color: rgb(255,116,31);
-  font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "mirinia";
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -146,7 +155,7 @@ img::-moz-selection {
     background-color: transparent;
   }
   #mainNav .navbar-brand {
-    font-size: 1.75em;
+    font-size: 3em;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
@@ -586,10 +595,11 @@ header.masthead .intro-text .intro-heading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../img/map-image.png");
-  background-repeat: no-repeat;
+  background-color: #4f463f;/*#704b28;  212529 */
+  background-image: url("../img/contact-bg.jpg");
+  background-repeat: round;
   background-position: center;
+  background-blend-mode: overlay;
 }
 
 section#contact .section-heading {

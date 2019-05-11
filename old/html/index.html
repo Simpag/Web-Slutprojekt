@@ -1,0 +1,139 @@
+<!--
+  5/4-19 Undersökte hur handlebars fungerade
+
+  11/4-19 Testade Github api samt lade grunden för att hämta en portfolio fil. 
+  Lärde mig att github har en limit på ca 60 requests per timme för deras api om man inte är authenticated.
+
+  12/4-19 La in en template för hemsidan och modifierade den.
+  Jag la till templates för handlebars så nu importeras alla repos som har en portfolio.txt fil.
+
+-->
+
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="Portfolio" content="">
+  <meta name="Simon G" content="">
+
+  <title>Simons portfolio</title>
+
+  <!-- CSS -->
+<link rel = "stylesheet" href = "../css/styles.css">
+
+</head>
+
+<body id = "page-top">
+
+  <!-- Navigation -->
+  <nav id = "main-nav">
+      <a class = "js-scroll-trigger" id = "main-nav-logo" href = "#page-top">Simons Portfolio</a>
+
+      <div id = "nav-items">
+        <ul>
+          <li class = "nav-item">
+            <a class = "js-scroll-trigger" href = "#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class = "js-scroll-trigger" href = "#about">Om</a>
+          </li>
+          <li class="nav-item">
+            <a class = "js-scroll-trigger" href = "#contact">Kontakt</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="section">
+    <div class="intro-text">
+      <div class="intro-lead-in">Det här är min Portfolio!</div>
+      <div class="intro-heading text-uppercase">Det är inte så mycket, men lite.</div>
+      <a class="js-scroll-trigger" id = "more-button" href="#portfolio">Titta vidare...</a>
+    </div>
+  </header>
+
+  <!-- Portfolio -->
+  <div class = "section" id = "portfolio">
+    <div class = "section-intro">
+      <h1 class = "section-header">Portfolio</h1>
+      <h2 class  = "section-text">Det här är mina projekt som jag arbetat med under min skolgång.</h2>
+    </div>
+
+    <div class = "section-content">
+      <div id = "project-template-container">
+        <script id="project-template" type="text/x-handlebars-template">
+            {{#each portfolio-project}}
+
+            <div class="col-md-4 col-sm-6 portfolio-item">
+              <a class="portfolio-link" data-toggle="modal" href="#{{Modalname}}">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid" src="{{Image}}" alt="">
+              </a>
+              <div class="portfolio-caption">
+                <h4>{{ProjectName}}</h4>
+                <p class="text-muted">{{ProjectTopic}}</p>
+              </div>
+            </div>
+
+            {{/each}}
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class = "section" id = "about">
+    <div class = "section-intro">
+      <h1 class = "section-header">Om</h1>
+      <h2 class  = "section-text">Min skolgång...</h2>
+    </div>
+
+    <div class = "section-content">
+      <ul id = "timeline">
+        <li class = "timeline-object">
+          <img class = "circle-image" src="../media/about/1.png" alt="">
+          <div class = "timeline-text">
+            <h1>2016 - 2017</h1>
+            <p>Jag började lära mig programmera med gamemaker. Det var ett väldigt bra verktyg för att förstå OOP.</p>
+          </div>
+        </li>
+
+        <li class = "timeline-object-inverted">
+          <img class = "circle-image" src="../media/about/2.png" alt="">
+          <div class = "timeline-text">
+            <h1>2017 - 2018</h1>
+            <p>Läste en C++ kurs på 100 gymnasiepoäng. Denna kursen var långsam men fick lära mig en del om C++ syntaxen.</p>
+          </div>
+        </li>
+
+        <li class = "timeline-object">
+          <img class = "circle-image" src="../media/about/3.jpg" alt="">
+          <div class = "timeline-text">
+            <h1>2018 - 2019</h1>
+            <p>Började lära mig Unity och använde C# språket i ett spelprojekt i skolan.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Libraries JavaScript -->
+  <script type="text/javascript" src = "../javascript/Libraries/jquery.js"></script>
+  <script type="text/javascript" src = "../javascript/Libraries/jquery.easing.js"></script>
+  <script type="text/javascript" src = "../javascript/Libraries/handlebars-v4.1.1.js"></script>
+
+  <!-- Smooth Scrolling -->
+  <script type="text/javascript" src="../javascript/scrolling.js"></script>
+
+  <!-- Portfolio loader -->
+ 
+</body>
+
+</html>
