@@ -30,7 +30,7 @@ function recived_repos(response) {
         var _requestJSON = $.getJSON(_url,
             function (_response, textStatus) {
                 if (textStatus === "success"){
-                    var portfolioString = atob(_response.content);
+                    var portfolioString = Base64.decode(_response.content);
                     //var portfolioObject = { "name" : _name, "content" : portfolioString }
                     
                     portfolioContents.push(portfolioString);
